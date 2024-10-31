@@ -1,21 +1,30 @@
 fut-squadBilder
 
-“Squad Builder” is a web application designed to help users build and optimize sports teams based on club, league, and nationality, emulating the chemistry system found in FIFA 23. Developed using React for the frontend and Node.js (AWS Lambda) for the backend, it integrates with a DynamoDB database to manage data.
+fut-squadBilder is a web application allowing users to create and optimize sports teams based on club, league, and nationality criteria, inspired by FIFA 23’s chemistry system. This project utilizes React for the frontend and Node.js (AWS Lambda) for the backend, with data stored in DynamoDB.
 
-Key Features:
+Features
 
-	1.	DynamoDB Structure:
-	•	Two tables, “Players” and “Teams,” store player and team information. The “Players” table includes player-specific details (name, club, league, nationality) and a ChemistryScore attribute. The “Teams” table holds team names, a list of player IDs, and the overall team chemistry score.
-	2.	Chemistry Rules:
-	•	Chemistry is calculated based on shared club, nationality, and league among team players, following FIFA 23’s model:
-	•	Club: 1 point for 2 players, 2 points for 4, 3 points for 7.
-	•	Nationality: 1 point for 2 players, 2 points for 5, 3 points for 8.
-	•	League: 1 point for 3 players, 2 points for 5, 3 points for 8.
-	•	These scores are combined for the team’s final ChemistryScore.
-	3.	React Frontend:
-	•	Users can create and manage players and teams, and view how chemistry changes with different player choices.
-	4.	AWS Lambda Backend:
-	•	AWS Lambda functions handle player data retrieval and chemistry calculations, bridging the frontend with DynamoDB.
+Database Structure (DynamoDB)
 
+	•	Players Table: Contains player data including name, club, league, nationality, and individual ChemistryScore.
+	•	Teams Table: Stores team names, lists of player IDs, and the overall team ChemistryScore.
+
+Chemistry Rules
+
+Chemistry is calculated based on shared club, nationality, and league among players, using a FIFA 23-like model:
+
+	•	Club Chemistry: 1 point for 2 players, 2 points for 4 players, 3 points for 7 players.
+	•	Nationality Chemistry: 1 point for 2 players, 2 points for 5 players, 3 points for 8 players.
+	•	League Chemistry: 1 point for 3 players, 2 points for 5 players, 3 points for 8 players.
+	•	These scores combine to create the team’s final ChemistryScore.
+
+Frontend (React)
+
+	•	Player Management: Users can create players by entering attributes like name, club, nationality, and league.
+	•	Team Management: Users can create teams, assign players, and view chemistry scores.
+
+Backend (AWS Lambda)
+
+	•	AWS Lambda functions handle player data retrieval, team chemistry calculations, and data storage in DynamoDB.
 For security, AWS configurations aren’t included in the repository, meaning full functionality requires setup on AWS.
 
