@@ -26,5 +26,4 @@ Frontend (React)
 Backend (AWS Lambda)
 
 	•	AWS Lambda functions handle player data retrieval, team chemistry calculations, and data storage in DynamoDB.
-For security, AWS configurations aren’t included in the repository, meaning full functionality requires setup on AWS.
-
+Note: This project cannot be fully executed locally as it relies on AWS services (DynamoDB and AWS Lambda). You will need to set up the necessary AWS configurations using Terraform to run the backend components. The repository does not include the Terraform configuration files, so they will need to be created separately to deploy the infrastructure on AWS.
