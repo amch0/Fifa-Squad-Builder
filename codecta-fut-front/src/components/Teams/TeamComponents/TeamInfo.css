@@ -1,0 +1,73 @@
+.team-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.teams-title {
+  color: #354785;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.team-cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.team-card {
+  box-sizing: border-box;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 20px;
+  background-color: rgba(0, 0, 0, 0.886);
+  color: #fff;
+  box-shadow: inset -1px 1px 17px 0px rgb(41 200 133);
+
+  transition: transform 0.3s, box-shadow 0.3s;
+  overflow: visible;
+  position: relative;
+  cursor: pointer;
+}
+
+.team-name {
+  color: #223471;
+  text-transform: uppercase;
+}
+.delete-team-button {
+  position: absolute;
+  top: -10px;
+  left: -30px;
+  background: #fff;
+  border: none;
+  border-radius: 50%;
+  padding: 8px;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transform: scale(0);
+}
+
+.edit-team-button {
+  position: absolute;
+  top: -10px;
+  right: -30px;
+  background: #fff;
+  border: none;
+  border-radius: 50%;
+  padding: 8px;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transform: scale(0);
+}
+
+.team-card:hover .delete-team-button,
+.team-card:hover .edit-team-button {
+  opacity: 1;
+  transform: scale(1);
+  transition-delay: 0s;
+}

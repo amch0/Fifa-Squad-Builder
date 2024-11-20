@@ -1,0 +1,96 @@
+.stadium-wrapper {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  position: relative;
+}
+
+.stadium {
+  width: 80%;
+  height: 650px;
+  background-image: url("../../../assets/AdobeStock_65164668_Preview.png");
+  background-size: 100% 100%;
+  position: relative;
+  box-shadow: -1px 1px 20px 12px rgb(41 200 133);
+  border-radius: 30px;
+}
+
+.players-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr) repeat(3, 1fr) repeat(3, 1fr) 1fr;
+  grid-gap: 10px;
+  height: 100%;
+}
+
+.player {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 7px;
+  color: rgb(0, 0, 0);
+  text-transform: uppercase;
+  font-weight: bold;
+  border-radius: 5px;
+  position: relative;
+}
+
+.player img {
+  max-width: 100px;
+  max-height: 100px;
+}
+
+.attacker {
+  margin-top: 100px;
+  grid-column: span 4;
+}
+
+.midfield {
+  grid-column: 5 / span 3;
+}
+
+.defense {
+  grid-column: 8 / span 3;
+}
+.team-chemistry {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: rgb(56, 17, 196);
+  color: #fff;
+  padding: 8px 15px;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.player-info-box {
+  position: absolute;
+  top: -50px;
+  left: 20px;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.player:hover .player-info-box {
+  display: block;
+}
+
+.player-info-box {
+  transition: opacity 0.5s ease-in-out;
+  opacity: 0;
+}
+
+.player:hover .player-info-box {
+  opacity: 1;
+}
+.no-players {
+  align-items: center;
+}
+.select-stadium {
+  margin-bottom: 50px;
+}

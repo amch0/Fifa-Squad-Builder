@@ -1,0 +1,30 @@
+.team-players {
+  display: flex;
+  flex-direction: column;
+
+  background-color: rgb(19 11 46);
+  padding: 20px;
+  margin-top: 20px;
+  color: white;
+}
+
+.team-players li {
+  list-style: none;
+  border-bottom: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.team-players li:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.delete-team-player-button {
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  margin: 5px;
+  cursor: pointer;
+}

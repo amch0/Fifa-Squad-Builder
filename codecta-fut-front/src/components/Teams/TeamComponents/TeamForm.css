@@ -1,0 +1,41 @@
+.page-content {
+  margin: 20px;
+}
+
+.form-team-container {
+  width: 300px;
+  margin: 0 auto;
+}
+
+label {
+  margin-bottom: 10px;
+}
+
+#teamNameInput {
+  padding: 8px;
+  margin-bottom: 20px;
+}
+
+.submit-team-button {
+  padding: 10px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.submit-team-button:hover {
+  background-color: #45a049;
+}
+.team-form {
+  display: flex;
+  flex-direction: column;
+  background-color: transparent;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 20px 12px rgb(41 200 133);
+  color: #223471;
+
+  max-width: 500px;
+  margin: 0 auto;
+}
